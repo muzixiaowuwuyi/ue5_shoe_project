@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Canvas } from '@react-three/fiber';
 import { useSnapshot } from 'valtio';
 import Shoe from './Shoe';
@@ -15,8 +16,8 @@ export default function ShoeCanvas() {
   }, [snap.current, snap.items]);
 
   return (
-    <Canvas shadows camera={{ position: [0, 0, 5], fov: 18 }}>
-      <ambientLight intensity={0.7} />
+    <Canvas shadows camera={{ position: [0, 0, 5], fov: 25 }}>
+      <ambientLight intensity={1} />
       <spotLight
         intensity={0.5}
         angle={0.5}
