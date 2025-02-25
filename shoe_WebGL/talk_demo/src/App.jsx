@@ -5,7 +5,7 @@ import MainSection from './components/MainSection';
 function App() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="flex h-3/4  bg-white shadow-lg rounded-lg overflow-hidden w-3/4">
+      <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-3/4 h-[90vh]">
         <div className="w-1/4">
           <Sidebar />
         </div>

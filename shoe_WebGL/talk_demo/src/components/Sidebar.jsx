@@ -27,16 +27,16 @@ export default function Sidebar() {
       ></div>
 
       <div className="mt-4 text-center">
-        <p className="text-gray-700">
-          Current Color:{' '}
-          <span className="font-bold text-blue-500">
+        <div className="flex items-center justify-around">
+          <p className="text-gray-700 mb-2 ">Current Item: </p>
+          <p className="font-bold text-blue-500 pb-2">{snap.current}</p>
+        </div>
+        <div className="flex items-center justify-around">
+          <p className="text-gray-700 mb-2">Current Color:</p>
+          <p className="font-bold text-blue-500 pl-2 pb-2">
             {snap.items[snap.current]}
-          </span>
-        </p>
-        <p className="text-gray-700">
-          Current Item:{' '}
-          <span className="font-bold text-blue-500">{snap.current}</span>
-        </p>
+          </p>
+        </div>
       </div>
     </div>
   );
