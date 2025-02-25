@@ -37,8 +37,10 @@ export default function ShoeCanvas() {
       <OrbitControls
         minPolarAngle={Math.PI / 2}
         maxPolarAngle={Math.PI / 2}
-        enableZoom={false}
+        enableZoom={true}
         enablePan={false}
+        minDistance={3}
+        maxDistance={20}
       />
     </Canvas>
   );
