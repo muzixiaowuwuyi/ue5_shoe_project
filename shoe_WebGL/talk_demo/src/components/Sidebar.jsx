@@ -8,7 +8,6 @@ export default function Sidebar() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-5 bg-gray-100 shadow-md box-border rounded-lg p-2">
       <h2 className="text-2xl font-bold mb-4 text-gray-800">Color Customizer</h2>
-      
       <ChromePicker
         color={snap.items[snap.current]}
         onChange={(color) => (state.items[snap.current] = color.hex)}

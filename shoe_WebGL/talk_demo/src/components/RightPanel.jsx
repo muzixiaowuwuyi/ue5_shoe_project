@@ -1,6 +1,5 @@
 import { useSnapshot } from "valtio";
 import { state } from "../state/state";
-import "./buttonStyles.css";
 
 function RightPanel() {
     const snap = useSnapshot(state);

@@ -9,9 +9,7 @@ function TopSection() {
                     <ShoeCanvas />
                 </h3>
             </div>
-
             <RightPanel />
-
         </div>
     );
 }
