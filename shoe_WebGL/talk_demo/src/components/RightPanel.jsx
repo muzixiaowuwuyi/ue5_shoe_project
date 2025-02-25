@@ -15,8 +15,10 @@ function RightPanel() {
           .filter((item) => item !== 'null' && snap.items[item] !== undefined)
           .map((item) => (
             <div
+              // ODO: Tadd onclick event to change the snap.current to the item
+              onClick={() => (state.current = item)}
               key={item}
-              className="flex items-center justify-around rounded-lg shadow-sm"
+              className="flex items-center justify-around rounded-lg shadow-sm hover:bg-gray-100 cursor-pointer"
             >
               <span className="text-gray-700 font-medium text-sm flex-shrink-0 min-w-[50px] text-right text-gray-700">
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -44,3 +46,16 @@ function RightPanel() {
 }
 
 export default RightPanel;
+// export const state = proxy({
+//   current: null,
+//   items: {
+//     laces: "#fff",
+//     mesh: "#fff",
+//     caps: "#fff",
+//     inner: "#fff",
+//     sole: "#fff",
+//     stripes: "#fff",
+//     band: "#fff",
+//     patch: "#fff",
+//   },
+// });
