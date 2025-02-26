@@ -7,19 +7,19 @@ function MainSection() {
   const [imageIndex, setImageIndex] = useState(0);
 
   return (
-    <div className="flex-1 rounded-lg shadow min-h-full p-4">
+    <div className="flex-1 rounded-lg shadow min-h-full p-4 align-middle ">
       <h2 className="text-lg font-semibold bg-white text-center rounded">
         Render
       </h2>
-      <div className="flex justify-between gap-4">
-        <div className="mt-4">
-          <img
+      <div className="flex justify-between p-4">
+          {
+          snap.renderedImages.length > 0 && (<img
             src={snap.renderedImages[imageIndex]}
             alt="Rendered"
-            className="w-[80%] h-[80%] mx-auto object-cover rounded-lg shadow-"
-          />
-        </div>
-        <div className="flex flex-col items-center gap-2 p-2 overflow-y-auto">
+            className="mx-auto rounded-lg shadow object-none w-[50%] h-[50%]"
+          />)
+          }
+        <div className="flex flex-col items-center gap-2 p-2 h-[50%]">
           {snap.renderedImages.length > 0 ? (
             snap.renderedImages.map((image, index) => (
               <div
@@ -30,7 +30,7 @@ function MainSection() {
                 <img
                   src={image}
                   alt={`Rendered ${index}`}
-                  className="w-[100px] object-cover rounded shadow-lg"
+                  className="w-[80px] object-fill rounded shadow-lg cursor-pointer"
                 />
               </div>
             ))

@@ -18,7 +18,7 @@ function RightPanel() {
     const canvas_new = document.createElement('canvas');
     const renderer = new WebGLRenderer({ canvas: canvas_new, antialias: true });
     renderer.setClearColor(0xf5f5f5, 1);
-    renderer.setSize(4096, 4096);
+    renderer.setSize(1024, 1024);
 
     const scene = new Scene();
 
@@ -27,9 +27,15 @@ function RightPanel() {
     scene.add(ambientLight);
 
     // Spot light or other directional light
-    const spotLight = new SpotLight(0xffffff, 1);
-    spotLight.position.set(5, 10, 5);
+    const spotLight = new SpotLight(0xffffff, 700);
+    spotLight.position.set(10, 10, 10);
+    spotLight.angle = Math.PI/6;
+    spotLight.penumbra = 0.3;
+    spotLight.decay = 2;
     spotLight.castShadow = true;
+
+    spotLight.shadow
+
     scene.add(spotLight);
 
     scene.add(nodes.shoe);
