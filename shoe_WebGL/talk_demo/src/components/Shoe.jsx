@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import { useGLTF } from '@react-three/drei';
 import { state } from '../state/state';
@@ -9,7 +9,6 @@ export default function Shoe() {
   const ref = useRef();
   const snap = useSnapshot(state);
   const { nodes, materials } = useGLTF('/shoe-draco.glb');
-  const [hovered, setHovered] = useState(null);
 
   //update the color of the material
   const handleMaterialUpdate = (key) => {
@@ -37,11 +36,6 @@ export default function Shoe() {
   return (
     <group
       ref={ref}
-      onPointerOver={(e) => {
-        e.stopPropagation();
-        setHovered(e.object.material.name);
-      }}
-      onPointerOut={(e) => e.intersections.length === 0 && setHovered(null)}
       onClick={(e) => {
         e.stopPropagation();
         state.current = e.object.material.name; //update the current material

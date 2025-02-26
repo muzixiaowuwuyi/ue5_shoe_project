@@ -1,17 +1,18 @@
 // src/state/state.js
-import { proxy } from "valtio";
+import { proxy } from 'valtio';
 
 // states
 export const state = proxy({
-  current: null, 
+  current: null,
   items: {
-    laces: "#fff",  
-    mesh: "#fff",   
-    caps: "#fff",  
-    inner: "#fff", 
-    sole: "#fff",  
-    stripes: "#fff",
-    band: "#fff",   
-    patch: "#fff",  
+    laces: '#fff',
+    mesh: '#fff',
+    caps: '#fff',
+    inner: '#fff',
+    sole: '#fff',
+    stripes: '#fff',
+    band: '#fff',
+    patch: '#fff',
   },
+  renderedImages: [],
 });

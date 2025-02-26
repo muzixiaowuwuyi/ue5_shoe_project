@@ -26,7 +26,7 @@ export default function Sidebar() {
         style={{ backgroundColor: snap.items[snap.current] }}
       ></div>
 
-      <div className="mt-4 text-center">
+      {/* <div className="mt-4 text-center">
         <div className="flex items-center justify-around">
           <p className="text-gray-700 mb-2 ">Current Item: </p>
           <p className="font-bold text-blue-500 pb-2">{snap.current}</p>
@@ -37,7 +37,7 @@ export default function Sidebar() {
             {snap.items[snap.current]}
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
