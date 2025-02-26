@@ -15,4 +15,5 @@ export const state = proxy({
     patch: '#fff',
   },
   renderedImages: [],
+  highResImages: [],
 });

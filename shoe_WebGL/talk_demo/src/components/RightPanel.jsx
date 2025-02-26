@@ -18,7 +18,7 @@ function RightPanel() {
     const canvas_new = document.createElement('canvas');
     const renderer = new WebGLRenderer({ canvas: canvas_new, antialias: true });
     renderer.setClearColor(0xf5f5f5, 1);
-    renderer.setSize(256, 256);
+    renderer.setSize(4096, 4096);
 
     const scene = new Scene();
 
@@ -73,7 +73,7 @@ function RightPanel() {
       renderImages.push(imageData);
     });
 
-    state.renderedImages = [...renderImages]; // Store the results for use
+    state.renderedImages = [...renderImages];
   };
 
   return (
