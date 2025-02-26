@@ -12,13 +12,13 @@ function MainSection() {
         Render
       </h2>
       <div className="flex justify-between p-4">
-          {
-          snap.renderedImages.length > 0 && (<img
+        {snap.renderedImages.length > 0 && (
+          <img
             src={snap.renderedImages[imageIndex]}
             alt="Rendered"
-            className="mx-auto rounded-lg shadow object-none w-[50%] h-[50%]"
-          />)
-          }
+            className="mx-auto rounded-lg shadow object-fit w-[70%] h-[70%]"
+          />
+        )}
         <div className="flex flex-col items-center gap-2 p-2 h-[50%]">
           {snap.renderedImages.length > 0 ? (
             snap.renderedImages.map((image, index) => (
@@ -30,7 +30,7 @@ function MainSection() {
                 <img
                   src={image}
                   alt={`Rendered ${index}`}
-                  className="w-[80px] object-fill rounded shadow-lg cursor-pointer"
+                  className="w-[60px] object-fill rounded shadow-lg cursor-pointer"
                 />
               </div>
             ))

@@ -29,12 +29,12 @@ function RightPanel() {
     // Spot light or other directional light
     const spotLight = new SpotLight(0xffffff, 700);
     spotLight.position.set(10, 10, 10);
-    spotLight.angle = Math.PI/6;
+    spotLight.angle = Math.PI / 6;
     spotLight.penumbra = 0.3;
     spotLight.decay = 2;
     spotLight.castShadow = true;
 
-    spotLight.shadow
+    spotLight.shadow;
 
     scene.add(spotLight);
 
@@ -55,7 +55,7 @@ function RightPanel() {
     });
 
     // Set the camera
-    const camera = new OrthographicCamera(-2.5, 2.5, 2.5, -2.5, 0.1, 100);
+    const camera = new OrthographicCamera(-1.1, 1.1, 1.1, -1.1, 0.1, 100);
     camera.position.set(0, 0, 3);
     camera.lookAt(0, 0, 0);
 
