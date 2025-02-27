@@ -55,7 +55,7 @@ function RightPanel() {
     });
 
     // Set the camera
-    const camera = new OrthographicCamera(-1.1, 1.1, 1.1, -1.1, 0.1, 100);
+    const camera = new OrthographicCamera(-1.1, 1.1, 1.1, -1.1, 0.0001, 100);
     camera.position.set(0, 0, 3);
     camera.lookAt(0, 0, 0);
 
